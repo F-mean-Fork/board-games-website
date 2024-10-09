@@ -1,0 +1,185 @@
+.wrapper {
+    max-width: 100%;
+
+    &__bar{
+        display: flex;
+        margin-top: 24px;
+        margin-bottom: 32px;
+
+        &__item:first-child::after{
+            content: "";
+            background: url("../../../img/icons/arrow-icon.svg") no-repeat center;
+            padding-left: 34px;
+        }
+    }
+
+    &__mainInfo {
+       display: flex;
+       justify-content: space-between;
+       align-items: top;
+        
+        &__card{
+            width: auto;
+            display: flex;
+            box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+
+            &__whiteBox{
+                width: 321px;
+                height: 361px;
+                position: relative;
+                background-color: white;
+                border-radius: inherit;
+
+                &__info{
+                    position: absolute;
+                    top: 32px;
+                    left: 30.87px;
+                    z-index: 10;
+
+                    &__title{
+                        color: #424242;
+                        font-size: 36px;
+                        font-weight: 800;
+                        width: 550px;
+
+                    }
+
+                    &__characteristics{
+                        margin-top: 19px;
+                        display: flex;
+                        gap: 6px;
+                        flex-wrap: wrap;
+                        width: 297px;
+
+                        &__item{
+                            font-weight: 600;
+                            padding: 6px 12px;
+                            background-color: rgba(28, 28, 28, 0.08);
+                            color: #383838;
+                            border-radius: 3px;
+                        }
+
+                            
+                        &__text{
+                            margin-top: 18px;
+                            width: 297px;
+                            font-size: 16px;
+                            line-height: 130%;
+                        }
+        
+                        }
+
+                }
+            }
+
+            &__wrapper{
+                position: relative;
+
+                &__characteristics{
+                    position: absolute;
+                    right: 13.93px;
+                    top: 10.62px;
+                    z-index: 2;
+
+                    border-radius: 3px;
+                    font-size: 10px;
+                    line-height: 110%;
+                    color: #383838;
+                    padding:  4px 11px;
+
+                    background-color: #ffffff80;
+                    
+
+                }
+
+                &__gradient{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 2;
+                }
+            }
+        }
+
+        &__payment{
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 261px;
+            height: 229.42px;
+            box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+
+            &__info{
+                width: 219px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                &__acceptance{
+                    font-size: 13px;
+                    line-height: 130%;
+                    color: #383838;
+                    opacity: 90%;
+                    margin-bottom: 8px;
+                }
+
+                &__banks{
+                    display: flex;
+                    flex-wrap: nowrap;
+                    gap: 18px;
+
+                }
+
+                &__howToPay{
+                    margin: 24px 0;
+                    font-size: 16px;
+                    line-height: 120%;
+                    color: #383838;
+                    text-align: center;
+                    
+                    a{
+                        color: #DD4E00;
+                        transition: ease-in-out .1s all;
+                    }
+
+                    a:hover,
+                    a:active,
+                    a:focus-visible{
+                        color: #a94b19;
+                        font-weight: 700;
+                    }
+                }
+
+                &__btn{
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    padding: 16px 24px;
+
+                    background-color: #F77833;
+                    border-radius: 8px;
+                    border: none;
+                    box-shadow: 0px 1px 3px rgba(188, 66, 0, 0.15);
+                    
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: white;
+
+                    transition: ease-in-out .1s all;
+
+                }
+
+                &__btn:hover,
+                &__btn:active,
+                &__btn:focus-visible{
+                    transform: scale(1.05);
+                }
+            }
+        }  
+    }          
+}
