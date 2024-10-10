@@ -659,6 +659,9 @@ button:focus-visible {
   color: #5E5E5E;
   line-height: 130%;
 }
+.wrapper__feedback__content .carousel .carousel-inner .carousel-item:last-child {
+  margin-right: -24px;
+}
 .wrapper__feedback__content .carousel .carousel-inner::-webkit-scrollbar {
   /* Chrome, Safari, Opera */
   border-radius: 7px;
@@ -681,19 +684,22 @@ button:focus-visible {
   /* Chrome, Safari, Opera */
   border-radius: 7px;
   background: #A8A8A8;
-  cursor: grab;
+  cursor: grabbing;
+  width: 260px;
 }
 .wrapper__feedback__content .carousel .carousel-inner::-moz-scrollbar-thumb {
   /* Firefox */
   border-radius: 7px;
   background-color: #A8A8A8;
-  cursor: grab;
+  cursor: grabbing;
+  width: 260px;
 }
 .wrapper__feedback__content .carousel .carousel-inner::-ms-scrollbar-thumb {
   /* Internet Explorer, Edge */
   border-radius: 7px;
   background-color: #A8A8A8;
-  cursor: grab;
+  cursor: grabbing;
+  width: 260px;
 }
 .wrapper__feedback__content__btn {
   padding-left: 129px;
