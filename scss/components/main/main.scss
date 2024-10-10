@@ -5,12 +5,8 @@
         display: flex;
         margin-top: 24px;
         margin-bottom: 32px;
-
-        &__item:first-child::after{
-            content: "";
-            background: url("../../../img/icons/arrow-icon.svg") no-repeat center;
-            padding-left: 34px;
-        }
+        gap: 10px;
+        align-items: center;
     }
 
     &__mainInfo {
@@ -159,27 +155,56 @@
                     justify-content: space-between;
                     align-items: center;
                     width: 100%;
-                    padding: 16px 24px;
+                    padding-left: 24px;
+                    padding-right: 24px;
 
-                    background-color: #F77833;
-                    border-radius: 8px;
-                    border: none;
-                    box-shadow: 0px 1px 3px rgba(188, 66, 0, 0.15);
-                    
-                    font-size: 16px;
-                    font-weight: 700;
-                    color: white;
-
-                    transition: ease-in-out .1s all;
-
-                }
-
-                &__btn:hover,
-                &__btn:active,
-                &__btn:focus-visible{
-                    transform: scale(1.05);
                 }
             }
         }  
-    }          
+    }   
+    
+    &__feedback{
+        margin-top: 48px;
+
+        &__titleWrap{
+            color: #424242;
+            position: relative;
+            width: 307px;
+            margin-bottom: 24px;
+
+            &__text{
+               font-size: 28px;
+               line-height: 120%;
+               font-weight: 800; 
+            }
+
+            &__num{
+                font-size: 16px;
+                line-height: 120%;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+
+        &__content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 831px;
+
+            &__gallery{
+                height: 463px;
+
+            }
+
+            &__btn{
+                padding-left: 129px;
+                padding-right: 129px;
+                margin-bottom: 24px;
+                width: 437px;
+                
+            }
+        }
+    }
 }
