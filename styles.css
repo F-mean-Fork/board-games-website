@@ -647,6 +647,7 @@ button:focus-visible {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 16px;
+  gap: 8px;
 }
 .wrapper__feedback__content .carousel .carousel-inner .carousel-item__subtitle {
   color: #383838;
