@@ -49,23 +49,30 @@
                         font-size: 36px;
                         font-weight: 800;
                         width: 550px;
+                        line-height: 120%;
 
                     }
 
                     &__characteristics{
                         margin-top: 19px;
-                        display: flex;
-                        gap: 6px;
-                        flex-wrap: wrap;
                         width: 297px;
+                        display: flex;
+                        flex-wrap: wrap;
 
-                        &__item{
-                            font-weight: 600;
-                            padding: 6px 12px;
-                            background-color: rgba(28, 28, 28, 0.08);
-                            color: #383838;
-                            border-radius: 3px;
+                        &__items{
+                            display: flex;
+                            gap: 6px;
+                            flex-wrap: wrap;
+
+                            &__item{
+                                font-weight: 600;
+                                padding: 6px 12px;
+                                background-color: rgba(28, 28, 28, 0.08);
+                                color: #383838;
+                                border-radius: 3px;
+                            }
                         }
+
 
                             
                         &__text{
@@ -83,6 +90,16 @@
             &__wrapper{
                 position: relative;
 
+                
+                &__pic-big{
+                    display: block;
+                }
+
+                &__pic-small{
+                    display: none;
+                }
+
+
                 &__characteristics{
                     position: absolute;
                     right: 13.93px;
@@ -93,18 +110,11 @@
                     font-size: 10px;
                     line-height: 110%;
                     color: #383838;
-                    padding:  4px 11px;
+                    padding:  4px 10px 4px 11px;
 
                     background-color: #ffffff80;
                     
 
-                }
-
-                &__gradient{
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    z-index: 2;
                 }
             }
         }
@@ -215,6 +225,7 @@
                     overflow-X: scroll;
                     gap: 24px;
                     padding-bottom: 16px;
+                    border-radius: 8px;
 
                     .carousel-item{
                         width: 261px;
@@ -224,7 +235,7 @@
                         padding: 30px 24px 70px 24px;
                         background-color: white;
                         box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
-                        border-radius: 8px;
+
                         margin: 0;
     
                         &__date{
@@ -328,5 +339,9 @@
                 letter-spacing: -1px;
             }
         }
+    }
+
+    &__payment-small{
+        display: none;
     }
 }
