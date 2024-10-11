@@ -103,21 +103,29 @@
             &__titleWrap{
                 color: #424242;
                 position: static;
-                width: 100%;
-                margin-bottom: 30px;
-                text-align: center;
+                margin-bottom: 0;
+                width: 300px;
+                margin-left: 30px;
+
     
                 &__text{
-                   font-size: 28px;
+                   font-size: 24px;
                    line-height: 120%;
-                   font-weight: 800; 
+                   height: 29px;
+
                 }
     
                 &__num{
-                    font-size: 16px;
-                    line-height: 120%;
+                    display: flex;
+                    font-size: 13px;
+                    line-height: 130%;
                     position: static;
+                    align-items: center;
+                    height: 30px;
 
+                    &__count{
+                        display: block;
+                    }
                 }
             }
     
@@ -133,7 +141,7 @@
 
                     .carousel-inner{
                         grid-template-columns: repeat(1, 1fr);
-                        overflow-X: hidden;
+                        overflow-X: scroll;
                         padding-bottom: 0;
                         border-radius: 8px;
     
@@ -191,7 +199,44 @@
                             margin-right: -24px;
                         }
                     }
+
+                    .carousel-inner::-webkit-scrollbar {
+                        /* Chrome, Safari, Opera */
+                        display: none;
+                    }
+                      
+                      .carousel-inner::-moz-scrollbar {
+                        /* Firefox */
+                        display: none;
+                    }
+                      
+                      .carousel-inner::-ms-scrollbar {
+                        /* Internet Explorer, Edge */
+                        display: none;
+                    }
     
+                }
+
+                &__dots{
+                    display: flex;
+                    margin: 10px auto;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 6px;
+
+                    &__dot{
+                        width: 8px;
+                        aspect-ratio: 1;
+                        border-radius: 50%;
+                        background-color: black;
+                        opacity: 20%;
+                    }
+
+                    .active{
+                        width: 16px;
+                        height: 8px;
+                        border-radius: 10px;
+                    }
                 }
 
                 &__btn{
