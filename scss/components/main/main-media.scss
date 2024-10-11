@@ -246,6 +246,13 @@
                     width: 334px;
                     letter-spacing: -1px;
                 }
+
+                &__btn:hover,
+                &__btn:active,
+                &__btn:focus-visible{
+                    transform: scale(0.99);
+                    background-color: #e46e2f;
+                }
             }
         }
 
@@ -267,6 +274,13 @@
                 margin: 10px ;
                 width: 334px;
                 letter-spacing: -1px;
+            }
+
+            &__btn:hover,
+            &__btn:active,
+            &__btn:focus-visible{
+                transform: scale(0.99);
+                background-color: #e46e2f;
             }
         }
     }
