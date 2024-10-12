@@ -239,7 +239,6 @@
                         background-color: white;
                         box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
                         border-radius: 8px;
-                        margin: 0;
     
                         &__date{
                             color: #868686;
@@ -253,6 +252,7 @@
                             line-height: 130%;
                             font-weight: 600;
                             margin-bottom: 6px;
+
                         }
     
                         &__stars{
@@ -260,8 +260,7 @@
                             flex-wrap: nowrap;
                             justify-content: flex-start;
                             align-items: center;
-                            margin-bottom: 16px;
-                            gap: 8px
+                            gap: 8px;
                         }
     
                         &__subtitle{
@@ -275,7 +274,6 @@
                         &__text{
                             color: #5E5E5E;
                             line-height: 130%;
-    
                         }
                     }
 

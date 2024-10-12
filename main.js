@@ -70,3 +70,14 @@ carouselInner.addEventListener('scroll', function () {
   slideCountElement.textContent = `${slideNumber} / `;
 });
 
+
+
+carouselItems.forEach((carouselItem) => {
+  const nameBlock = carouselItem.querySelector('.carousel-item__name');
+  const starsBlock = carouselItem.querySelector('.carousel-item__stars');
+  const nameHeight = nameBlock.offsetHeight;
+
+  const marginBottom = 50 - nameHeight;
+  starsBlock.style.marginBottom = `${marginBottom}px`;
+});
+
