@@ -6,6 +6,7 @@ const closeButton = document.querySelector('.wrapper__header__menu__close');
 
 const carousel = document.getElementById('carouselExample');
 const carouselInner = document.querySelector('.carousel-inner');
+const carouselItems = document.querySelectorAll('.carousel-item');
 const dots = document.querySelectorAll('.wrapper__feedback__content__dots__dot');
 const slideCountElement = document.querySelector('.wrapper__feedback__titleWrap__num__count');
 
@@ -33,18 +34,39 @@ closeButton.addEventListener('click', () => {
 
 
 dots[0].classList.add('active');
-slideCountElement.textContent = `1 /`;
+slideCountElement.textContent = `1 / `;
+
 
 carouselInner.addEventListener('scroll', function () {
-  const activeIndex = Math.floor(carouselInner.scrollLeft / carouselInner.children[0].offsetWidth);
+  const totalWidth = carouselInner.scrollWidth - carouselInner.clientWidth; 
+
+  const scrollPercentage = (carouselInner.scrollLeft / totalWidth) * 100;
+  let activeIndex = 0;
+  
+  if (scrollPercentage >= 0 && scrollPercentage < 20) {
+      activeIndex = 0;
+  } else if (scrollPercentage >= 20 && scrollPercentage < 40) {
+      activeIndex = 1;
+  } else if (scrollPercentage >= 40 && scrollPercentage < 60) {
+      activeIndex = 2;
+  } else if (scrollPercentage >= 60 && scrollPercentage < 80) {
+      activeIndex = 3;
+  } else if (scrollPercentage >= 80 && scrollPercentage <= 100) {
+      activeIndex = 4;
+  }
+
   dots.forEach((dot, index) => {
-    if (index === activeIndex) {
-      dot.classList.add('active');
-    } else {
-      dot.classList.remove('active');
-    }
+      if (index === Math.floor(activeIndex)) {
+          dot.classList.add('active');
+      } else {
+          dot.classList.remove('active');
+      }
   });
 
-  slideCountElement.textContent = `${activeIndex + 1} /`;
+  let slideNumber = Math.ceil(scrollPercentage / 10);
+  if (scrollPercentage === 0) {
+      slideNumber = 1;
+  }
+  slideCountElement.textContent = `${slideNumber} / `;
 });
 
