@@ -991,7 +991,6 @@ button:focus-visible {
     color: #868686;
     font-size: 13px;
     line-height: 130%;
-    margin-bottom: 20px;
   }
   .wrapper__feedback__content .carousel .carousel-inner .carousel-item__name {
     color: #383838;
@@ -1004,7 +1003,6 @@ button:focus-visible {
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 20px;
     gap: 8px;
   }
   .wrapper__feedback__content .carousel .carousel-inner .carousel-item__subtitle {

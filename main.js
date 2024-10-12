@@ -11,6 +11,7 @@ const dots = document.querySelectorAll('.wrapper__feedback__content__dots__dot')
 const slideCountElement = document.querySelector('.wrapper__feedback__titleWrap__num__count');
 
 
+// Настройка burger menu
 items.forEach((item) => {
   item.addEventListener('mouseover', () => {
     const highlight = item.querySelector('.wrapper__header__bar__item__highlight');
@@ -32,10 +33,9 @@ closeButton.addEventListener('click', () => {
   menu.classList.remove('wrapper__header__menu-slide');
 });
 
-
+// Настройка слайдера
 dots[0].classList.add('active');
 slideCountElement.textContent = `1 / `;
-
 
 carouselInner.addEventListener('scroll', function () {
   const totalWidth = carouselInner.scrollWidth - carouselInner.clientWidth; 
@@ -72,12 +72,35 @@ carouselInner.addEventListener('scroll', function () {
 
 
 
-carouselItems.forEach((carouselItem) => {
+// Настройка диначеского margin-bottom
+function calculateHeight(carouselItem) {
   const nameBlock = carouselItem.querySelector('.carousel-item__name');
-  const starsBlock = carouselItem.querySelector('.carousel-item__stars');
-  const nameHeight = nameBlock.offsetHeight;
+  return nameBlock.offsetHeight;
+}
 
-  const marginBottom = 50 - nameHeight;
-  starsBlock.style.marginBottom = `${marginBottom}px`;
-});
+function calculateMarginBottom(width, height) {
+  if (width <= 360) {
+    return 20;
+  } else {
+    return 50 - height; 
+  }
+}
 
+function updateHeightAndMargin() {
+  const width = window.innerWidth;
+
+  carouselItems.forEach((carouselItem) => {
+    const nameBlock = carouselItem.querySelector('.carousel-item__name');
+    const starsBlock = carouselItem.querySelector('.carousel-item__stars');
+
+    const height = calculateHeight(carouselItem);
+    const marginBottom = calculateMarginBottom(width, height);
+
+    nameBlock.style.height = `${height}px`;
+    starsBlock.style.marginBottom = `${marginBottom}px`;
+  });
+}
+
+updateHeightAndMargin();
+
+window.addEventListener('resize', updateHeightAndMargin);
